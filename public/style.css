@@ -68,3 +68,52 @@ nav li a:hover {
 }
 
 
+
+.custom-switch-input:checked + .custom-switch-label {
+    background-color: #000;
+    color: #fff;
+}
+
+.custom-switch-input:checked + .custom-switch-label::before {
+    background-color: #fff;
+}
+
+.custom-switch-input {
+    display: none;
+}
+
+.custom-switch-label {
+
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #555;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-switch-label::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.custom-switch-input:checked + .custom-switch-label::before {
+    transform: translateX(26px);
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+}
+
+.save-text {
+    margin-left: 10px; 
+}
