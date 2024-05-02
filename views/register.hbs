@@ -25,31 +25,34 @@
     </nav>
 
     <div class="card-container">
-        <div class="card" style="width: 22rem;">
+        <div class="card" style="width: 33rem;">
             <img src="/assets/vlogo.png" class="card-img-top" alt="nodeLogo">
             <div class="card-body">
                 <h5 class="card-title">Register Form </h5>
                 <p class="card-text">Please register to proceed.</p>
 
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="addon-wrapping">Username</span>
-                    <input type="text" class="form-control" placeholder="Your Username" aria-label="Username"
-                        aria-describedby="addon-wrapping">
-                </div>
+                <form action="/auth/register" method="POST">
 
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="addon-wrapping">Password</span>
-                    <input type="text" class="form-control" placeholder="Your Password" aria-label="Password"
-                        aria-describedby="addon-wrapping">
-                </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="addon-wrapping">Username</span>
+                        <input id="name" name="name" "text" class="form-control" placeholder="Your Username"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
 
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="addon-wrapping">Email</span>
-                    <input type="text" class="form-control" placeholder="Your Email" aria-label="Email"
-                        aria-describedby="addon-wrapping">
-                </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="addon-wrapping">Password</span>
+                        <input id="password" name="password"type="text" class="form-control" placeholder="Your Password"
+                            aria-label="Password" aria-describedby="addon-wrapping">
+                    </div>
 
-                <a href="#" class="btn btn-dark d-grid justify-content-center">Register</a>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="addon-wrapping">Email</span>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="Your Email" aria-label="Email"
+                            aria-describedby="addon-wrapping">
+                    </div>
+
+                    <button type="submit" class="btn btn-dark d-grid justify-content-center">Register User</button>
+                </form>
             </div>
         </div>
     </div>

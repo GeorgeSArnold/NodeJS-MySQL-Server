@@ -47,7 +47,7 @@ nav li a:hover {
     color: #fff; 
     text-decoration: none;
     text-shadow: 
-        0 0 1px rgba(36, 255, 2, 0.8),
+        0 0 2px rgb(36, 255, 2),
         0 0 3px rgba(2, 200, 255, 0.8);
 }
 
@@ -61,7 +61,7 @@ nav li a:hover {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    margin-top: 30px;
+    margin-top: 65px;
 }
 
 .card {
@@ -72,9 +72,11 @@ nav li a:hover {
 }
 
 .btn {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+    box-shadow: 
+    0 0 2px rgba(0, 0, 0, 0.907),
+    0 0 3px rgba(0, 0, 0, 0.651),
+    0 0 4px rgba(0, 0, 0, 0.736);
 }
-
 
 /* save-switch */
 .custom-switch-input:checked + .custom-switch-label {
@@ -91,7 +93,6 @@ nav li a:hover {
 }
 
 .custom-switch-label {
-
     position: relative;
     width: 50px;
     height: 24px;

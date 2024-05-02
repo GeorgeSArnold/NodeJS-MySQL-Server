@@ -20,11 +20,16 @@ const db = mysql.createConnection({
 });
 
 // html view
-app.set('view engine', 'hbs');
-
 // public dir > css
 const publicDirectory = path.join(__dirname, './public');
 app.use(express.static(publicDirectory));
+
+// parsing > url > encoded bodys send > html forms 
+app.use(express.urlencoded({ extended: false }));
+// parsing > json > sent by API clients
+app.use(express.json());
+
+app.set('view engine', 'hbs');
 
 db.connect((error) => {
     if(error){
@@ -34,25 +39,11 @@ db.connect((error) => {
     }
 })
 
-// SERVER
-// # GET
-// index
-app.get("/", (req, res) => {
-    res.render("index");
-});
-// register
-app.get("/register", (req, res) => {
-    res.render("register");
-});
-// login
-app.get("/login", (req, res) => {
-    res.render("login");
-});
+// # DEFINE ROUTES
+app.use('/', require('./routes/pages'));
+app.use('/auth', require('./routes/auth'));
 
 // # LISTEN
 app.listen(7777, () => {
     console.log("# Server runs on Port 7777")
 });
-
-
-

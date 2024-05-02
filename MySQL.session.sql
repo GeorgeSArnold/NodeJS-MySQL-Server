@@ -12,3 +12,5 @@ create table users(
     password varchar(255),
     primary key(id)
 );
+
+SELECT * FROM users;
